@@ -1,7 +1,8 @@
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
-namespace StoreApi.Repositories
+
+namespace StoreApi.Repositories.Interfaces
 {
     public interface IRepository
     {

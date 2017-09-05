@@ -2,6 +2,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using System.Collections.Generic;
+using StoreApi.Repositories.Interfaces;
 namespace StoreApi.Repositories
 {
 

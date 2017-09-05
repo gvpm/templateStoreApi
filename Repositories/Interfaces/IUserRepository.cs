@@ -4,7 +4,7 @@ using MongoDB.Driver.Builders;
 using System.Collections.Generic;
 using StoreApi.Models;
 
-namespace StoreApi.Repositories
+namespace StoreApi.Repositories.Interfaces
 {
     public interface IUserRepository
     {

@@ -3,6 +3,7 @@ using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using System.Collections.Generic;
 using StoreApi.Models;
+using StoreApi.Repositories.Interfaces;
 namespace StoreApi.Repositories
 {
     public class UserRepository : IUserRepository

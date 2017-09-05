@@ -9,6 +9,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using StoreApi.Models.Enums;
+using StoreApi.Repositories.Interfaces;
 
 namespace StoreApi.Controllers
 {
