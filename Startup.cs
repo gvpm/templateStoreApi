@@ -26,6 +26,8 @@ namespace StoreApi
         {
             services.AddMvc();
             services.AddSingleton<IProductRepository, ProductRepository>();
+            services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton<IRepository, Repository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -11,11 +11,11 @@ namespace StoreApi.Repositories
         MongoServer _server;
         MongoDatabase _db;
 
-        public ProductRepository()
+        public ProductRepository(IRepository repository)
         {
-            _client = new MongoClient("mongodb://localhost:27017");
-            _server = _client.GetServer();
-            _db = _server.GetDatabase("StoreDB");
+            _client = repository.GetClient();
+            _server = repository.GetServer();
+            _db = repository.GetDatabase();
         }
 
         public IEnumerable<Product> Get()
