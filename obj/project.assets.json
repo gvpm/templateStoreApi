@@ -12889,11 +12889,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/gvpm/Desktop/StoreApi/StoreApi.csproj",
+      "projectUniqueName": "/home/gvpm/Desktop/CoreProjects/StoreApi/StoreApi.csproj",
       "projectName": "StoreApi",
-      "projectPath": "/home/gvpm/Desktop/StoreApi/StoreApi.csproj",
+      "projectPath": "/home/gvpm/Desktop/CoreProjects/StoreApi/StoreApi.csproj",
       "packagesPath": "/home/gvpm/.nuget/packages/",
-      "outputPath": "/home/gvpm/Desktop/StoreApi/obj/",
+      "outputPath": "/home/gvpm/Desktop/CoreProjects/StoreApi/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"

@@ -8,3 +8,13 @@
 /home/gvpm/Desktop/StoreApi/obj/Debug/netcoreapp2.0/StoreApi.AssemblyInfo.cs
 /home/gvpm/Desktop/StoreApi/obj/Debug/netcoreapp2.0/StoreApi.dll
 /home/gvpm/Desktop/StoreApi/obj/Debug/netcoreapp2.0/StoreApi.pdb
+/home/gvpm/Desktop/CoreProjects/StoreApi/bin/Debug/netcoreapp2.0/StoreApi.deps.json
+/home/gvpm/Desktop/CoreProjects/StoreApi/bin/Debug/netcoreapp2.0/StoreApi.runtimeconfig.json
+/home/gvpm/Desktop/CoreProjects/StoreApi/bin/Debug/netcoreapp2.0/StoreApi.runtimeconfig.dev.json
+/home/gvpm/Desktop/CoreProjects/StoreApi/bin/Debug/netcoreapp2.0/StoreApi.dll
+/home/gvpm/Desktop/CoreProjects/StoreApi/bin/Debug/netcoreapp2.0/StoreApi.pdb
+/home/gvpm/Desktop/CoreProjects/StoreApi/obj/Debug/netcoreapp2.0/StoreApi.csproj.CoreCompileInputs.cache
+/home/gvpm/Desktop/CoreProjects/StoreApi/obj/Debug/netcoreapp2.0/StoreApi.AssemblyInfoInputs.cache
+/home/gvpm/Desktop/CoreProjects/StoreApi/obj/Debug/netcoreapp2.0/StoreApi.AssemblyInfo.cs
+/home/gvpm/Desktop/CoreProjects/StoreApi/obj/Debug/netcoreapp2.0/StoreApi.dll
+/home/gvpm/Desktop/CoreProjects/StoreApi/obj/Debug/netcoreapp2.0/StoreApi.pdb
