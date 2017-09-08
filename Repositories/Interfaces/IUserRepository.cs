@@ -8,11 +8,11 @@ namespace StoreApi.Repositories.Interfaces
 {
     public interface IUserRepository
     {
-        IEnumerable<User> Get();
 
-        User Get(string id);
 
-        User Create(User u);
+        User Login(User oldUser);
+
+        User Create(User newUser);
 
         void Update(string id, User u);
         void Remove(string id);

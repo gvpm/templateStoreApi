@@ -50,32 +50,32 @@ namespace StoreApi.Controllers
         }
 
         // PUT /Product/5
-        [HttpPut("{id:length(24)}")]
-        public IActionResult Put(string id, [FromBody]Product p)
+        [HttpPut]
+        public IActionResult Put([FromBody]Product p)
         {
 
-            var product = _products.Get(id);
+            var product = _products.Get(p.Id);
             if (product == null)
             {
                 return NotFound();
             }
 
-            _products.Update(id, p);
-            return new OkResult();
+            _products.Update(p.Id, p);
+            return new OkObjectResult(p);
         }
 
         // DELETE /Product/5
-        [HttpDelete("{id:length(24)}")]
-        public IActionResult Delete(string id)
+        [HttpDelete]
+        public IActionResult Delete([FromBody]Product p)
         {
-            var product = _products.Get(id);
+            var product = _products.Get(p.Id);
             if (product == null)
             {
                 return NotFound();
             }
 
             _products.Remove(product.Id);
-            return new OkResult();
+            return new OkObjectResult(product);
         }
 
     }

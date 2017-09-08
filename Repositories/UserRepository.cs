@@ -19,22 +19,41 @@ namespace StoreApi.Repositories
             _db = repository.GetDatabase();
         }
 
-        public IEnumerable<User> Get()
+
+        public User Login(User oldUser)
         {
-            return _db.GetCollection<User>("Users").FindAll();
+            var res = Query<User>.EQ(u => u.UserName, oldUser.UserName);
+            var _user = _db.GetCollection<User>("Users").FindOne(res);
+
+            if(_user !=  null){
+            var oldUserHashPassword = oldUser.UserPassword.GetHashCode().ToString();
+            if (oldUserHashPassword.Equals(_user.UserHashPassword))
+            {
+                return _user;
+            }
+            }
+            return null;
         }
 
-
-        public User Get(string id)
+        public User Create(User newUser)
         {
-            var res = Query<User>.EQ(p => p.Id, id);
-            return _db.GetCollection<User>("Users").FindOne(res);
-        }
+            var res = Query<User>.EQ(u => u.UserName, newUser.UserName);
+            var _user = _db.GetCollection<User>("Users").FindOne(res);
 
-        public User Create(User u)
-        {
-            _db.GetCollection<User>("Users").Save(u);
-            return u;
+            var res2 = Query<User>.EQ(u => u.UserEmail, newUser.UserEmail);
+            var _user2 = _db.GetCollection<User>("Users").FindOne(res);
+
+            if(_user2 != null || _user != null){
+                return null;
+            }
+            
+            newUser.UserHashPassword = newUser.UserPassword.GetHashCode().ToString();
+            newUser.UserPassword=null;
+            _db.GetCollection<User>("Users").Save(newUser);
+
+            newUser.UserHashPassword=null;
+
+            return newUser;
         }
 
         public void Update(string id, User u)

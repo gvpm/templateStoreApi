@@ -9,16 +9,15 @@ namespace StoreApi.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
-        [BsonElement("ProductName")]
-        public string ProductName { get; set; }
-        [BsonElement("ProductDescription")]
-        public string ProductDescription { get; set; }
-        [BsonElement("ProductLink")]
-        public string ProductLink { get; set; }
-        [BsonElement("ProductPriceInCents")]
-        public int ProductPriceInCents { get; set; }
-        [BsonElement("ProductCategory")]
-        public CategoryEnum ProductCategory { get; set; }
+        [BsonElement("UserName")]
+        public string UserName { get; set; }
+        [BsonElement("UserEmail")]
+        public string UserEmail { get; set; }
+        [BsonElement("UserPassword")]
+        public string UserPassword { get; set; }
+        [BsonElement("UserHashPassword")]
+        public string UserHashPassword { get; set; }
+
 
 
 
