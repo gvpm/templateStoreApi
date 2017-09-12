@@ -35,7 +35,7 @@ namespace StoreApi.Controllers
             var product = _products.Get(id);
             if (product == null)
             {
-                return NotFound();
+                return StatusCode(404,"Product not found");
             }
             return new ObjectResult(product);
         }
@@ -57,7 +57,7 @@ namespace StoreApi.Controllers
             var product = _products.Get(p.Id);
             if (product == null)
             {
-                return NotFound();
+                return StatusCode(404,"Product not found");
             }
 
             _products.Update(p.Id, p);
@@ -71,7 +71,7 @@ namespace StoreApi.Controllers
             var product = _products.Get(p.Id);
             if (product == null)
             {
-                return NotFound();
+                return StatusCode(404,"Product not found");
             }
 
             _products.Remove(product.Id);

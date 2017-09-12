@@ -12,7 +12,7 @@ using StoreApi.Models.Enums;
 using StoreApi.Repositories.Interfaces;
 namespace StoreApi.Controllers
 {
-    [Route("[controller]")]
+    //[Route("[controller]")]
     public class UserController : Controller
     {
         public IUserRepository _users { get; set; }
@@ -22,7 +22,7 @@ namespace StoreApi.Controllers
         }
 
         // POST /Product
-        [Route("/new")]
+        [Route("user/new")]
         [HttpPost]
         public IActionResult New([FromBody]User p)
         {
@@ -33,11 +33,12 @@ namespace StoreApi.Controllers
                 return new OkObjectResult(added);
 
             }
-            return NotFound();
+            
+            return StatusCode(409,"Username already registered");
         }
 
         // POST /Product
-        //[Route("/login")]
+        [Route("user/login")]
         [HttpPost]
         public IActionResult Login([FromBody]User p)
         {
@@ -48,7 +49,7 @@ namespace StoreApi.Controllers
                 return new OkObjectResult(logged);
 
             }
-            return NotFound();
+            return StatusCode(404,"Username not found");
         }
 
 

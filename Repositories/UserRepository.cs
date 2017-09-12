@@ -29,6 +29,7 @@ namespace StoreApi.Repositories
             var oldUserHashPassword = oldUser.UserPassword.GetHashCode().ToString();
             if (oldUserHashPassword.Equals(_user.UserHashPassword))
             {
+                _user.UserHashPassword="******";
                 return _user;
             }
             }
@@ -41,17 +42,17 @@ namespace StoreApi.Repositories
             var _user = _db.GetCollection<User>("Users").FindOne(res);
 
             var res2 = Query<User>.EQ(u => u.UserEmail, newUser.UserEmail);
-            var _user2 = _db.GetCollection<User>("Users").FindOne(res);
+            var _user2 = _db.GetCollection<User>("Users").FindOne(res2);
 
             if(_user2 != null || _user != null){
                 return null;
             }
             
             newUser.UserHashPassword = newUser.UserPassword.GetHashCode().ToString();
-            newUser.UserPassword=null;
+            newUser.UserPassword="******";
             _db.GetCollection<User>("Users").Save(newUser);
 
-            newUser.UserHashPassword=null;
+            newUser.UserHashPassword="******";
 
             return newUser;
         }
