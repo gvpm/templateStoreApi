@@ -8,14 +8,14 @@ namespace StoreApi.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        MongoClient _client;
-        MongoServer _server;
+        //MongoClient _client;
+        //MongoServer _server;
         MongoDatabase _db;
 
         public ProductRepository(IRepository repository)
         {
-            _client = repository.GetClient();
-            _server = repository.GetServer();
+            //_client = repository.GetClient();
+            //_server = repository.GetServer();
             _db = repository.GetDatabase();
         }
 

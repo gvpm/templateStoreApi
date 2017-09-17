@@ -16,5 +16,6 @@ namespace StoreApi.Repositories.Interfaces
 
         void Update(string id, User u);
         void Remove(string id);
+        User GetUserById(string userID);
     }
 }
