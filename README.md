@@ -178,7 +178,7 @@ Response:
 Request:
 ```json
 {
-	"Operation" : "add",
+    "Operation" : "add",
     "UserId" : "59bf08d0767fc04886fac6b2",
     "ProductId" : "59bf091b767fc04886fac6b3"
 }
