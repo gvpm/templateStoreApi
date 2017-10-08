@@ -14,7 +14,7 @@ namespace StoreApi.Repositories
 
         public Repository()
         {
-            _client = new MongoClient("mongodb://52.33.94.204:27017");
+            _client = new MongoClient("mongodb://localhost:27017");
             _server = _client.GetServer();
             _db = _server.GetDatabase("StoreDB");
         }
