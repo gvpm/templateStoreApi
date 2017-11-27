@@ -184,9 +184,9 @@ Request:
 }
 ```
 
-Operation can be either "add" or "remove"
+Operation can be either "add" or "remove" or "pay"
 
-Response:
+Response to "add" or "remove":
 ```json
 {
     "id": "59bf09b1767fc04886fac6b5",
@@ -209,6 +209,86 @@ Response:
     ],
     "totalValue": 20
 }
+```
+Response to "pay" (It is a History, with HistoryId, Date and the Cart):
+```json
+{
+    "id": "5a1bb4a4678bcd26641ad503",
+    "date": "2017-11-27T00:00:00-02:00",
+    "cart": {
+        "id": "5a1baa30f6945c9b9042c04d",
+        "user": {
+            "id": "5a1baa29f6945c9b9042c04c",
+            "userName": "u4",
+            "userEmail": "u@22u",
+            "userPassword": "******",
+            "userHashPassword": "******"
+        },
+        "products": [
+            {
+                "id": "5a1a407ba038356ba83fafd3",
+                "productName": "exampl5e",
+                "productDescription": "example",
+                "productLink": "example",
+                "productPriceInCents": 40,
+                "productCategory": 0
+            }
+        ],
+        "totalValue": 40
+    }
+}
+```
+
+## GET /history/"userId"
+
+Request:
+/history/5a1baa29f6945c9b9042c04c
+
+Response (Gives you a List of History):
+```json
+[
+    {
+        "id": "5a1bacee8057952f1cd59205",
+        "date": "2017-11-27T02:00:00Z",
+        "cart": {
+            "id": "5a1baa30f6945c9b9042c04d",
+            "user": {
+                "id": "5a1baa29f6945c9b9042c04c",
+                "userName": "u4",
+                "userEmail": "u@22u",
+                "userPassword": "******",
+                "userHashPassword": "******"
+            },
+            "products": [],
+            "totalValue": 0
+        }
+    },
+    {
+        "id": "5a1bb4a4678bcd26641ad503",
+        "date": "2017-11-27T02:00:00Z",
+        "cart": {
+            "id": "5a1baa30f6945c9b9042c04d",
+            "user": {
+                "id": "5a1baa29f6945c9b9042c04c",
+                "userName": "u4",
+                "userEmail": "u@22u",
+                "userPassword": "******",
+                "userHashPassword": "******"
+            },
+            "products": [
+                {
+                    "id": "5a1a407ba038356ba83fafd3",
+                    "productName": "exampl5e",
+                    "productDescription": "example",
+                    "productLink": "example",
+                    "productPriceInCents": 40,
+                    "productCategory": 0
+                }
+            ],
+            "totalValue": 40
+        }
+    }
+]
 ```
 
 

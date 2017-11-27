@@ -11,11 +11,14 @@ namespace StoreApi.Repositories
         MongoDatabase _db;
         IUserRepository _userRepository;
         IProductRepository _productRepository;
-        public CartRepository(IRepository repository, IUserRepository userRepository, IProductRepository productRepository)
+
+        IHistoryRepository _historyRepository;
+        public CartRepository(IRepository repository, IUserRepository userRepository, IProductRepository productRepository,IHistoryRepository historyRepository)
         {
             _db = repository.GetDatabase();
             _userRepository = userRepository;
             _productRepository = productRepository;
+            _historyRepository = historyRepository;
         }
         public ExternalCart AddProduct(string userId, string productId)
         {
@@ -85,9 +88,23 @@ namespace StoreApi.Repositories
         }
 
 
-        public void Pay(string id)
+        public History Pay(string id)
         {
-            throw new System.NotImplementedException();
+
+            ExternalCart cartToPay = Get(id);
+
+            if (cartToPay.Products.Count == 0){
+                return null;
+            }
+            History history = new History(cartToPay);            
+    
+            foreach (var product in cartToPay.Products)
+            {
+                RemoveProduct(id,product.Id);
+            }
+
+            return _historyRepository.Create(history);
+
         }
 
         public ExternalCart RemoveProduct(string userId, string productId)

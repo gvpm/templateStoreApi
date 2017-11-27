@@ -11,6 +11,6 @@ namespace StoreApi.Repositories.Interfaces
         ExternalCart Get(string id);
         ExternalCart RemoveProduct(string userId, string productId);
         ExternalCart AddProduct(string userId, string productId);
-        void Pay(string id);
+        History Pay(string id);
     }
 }

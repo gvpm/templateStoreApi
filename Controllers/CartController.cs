@@ -36,11 +36,13 @@ namespace StoreApi.Controllers
         [HttpPost]
         public IActionResult AlterChart([FromBody]ChartInstruction ids)
         {
-            ExternalCart response = null;
+            Object response = null;
             if(ids.Operation.Equals("add")){
-                  response = _carts.AddProduct(ids.UserId,ids.ProductId);
+                response = _carts.AddProduct(ids.UserId,ids.ProductId);
             }else if(ids.Operation.Equals("remove")){
                 response = _carts.RemoveProduct(ids.UserId,ids.ProductId);
+            }else if(ids.Operation.Equals("pay")){
+                response = _carts.Pay(ids.UserId);
             }else {
                 return StatusCode(404, "Invalid Operation");
             }

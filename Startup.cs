@@ -38,6 +38,8 @@ namespace StoreApi
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<IRepository, Repository>();
             services.AddSingleton<ICartRepository, CartRepository>();
+            services.AddSingleton<IHistoryRepository, HistoryRepository>();
+            //services.AddSingleton<IWishListRepository, WishListRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
