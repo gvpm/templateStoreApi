@@ -291,4 +291,62 @@ Response (Gives you a List of History):
 ]
 ```
 
+## GET /wishlist/"userId"
+
+Request:
+/wishlist/59bf08d0767fc04886fac6b2
+
+Response:
+```json
+{
+    "id": "59bf09b1767fc04886fac6b5",
+    "user": {
+        "id": "59bf08d0767fc04886fac6b2",
+        "userName": "example",
+        "userEmail": "example@example",
+        "userPassword": "******",
+        "userHashPassword": "******"
+    },
+    "products": [],
+    "totalValue": 0
+}
+```
+## POST /wishlist/
+
+Request:
+```json
+{
+    "Operation" : "add",
+    "UserId" : "59bf08d0767fc04886fac6b2",
+    "ProductId" : "59bf091b767fc04886fac6b3"
+}
+```
+
+Operation can be either "add" or "remove"
+
+Response to "add" or "remove":
+```json
+{
+    "id": "59bf09b1767fc04886fac6b5",
+    "user": {
+        "id": "59bf08d0767fc04886fac6b2",
+        "userName": "example",
+        "userEmail": "example@example",
+        "userPassword": "******",
+        "userHashPassword": "******"
+    },
+    "products": [
+        {
+            "id": "59bf091b767fc04886fac6b3",
+            "productName": "example",
+            "productDescription": "example",
+            "productLink": "example",
+            "productPriceInCents": 20,
+            "productCategory": 0
+        }
+    ],
+    "totalValue": 20
+}
+```
+
 
