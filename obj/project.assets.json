@@ -12883,28 +12883,31 @@
     ]
   },
   "packageFolders": {
-    "/home/gvpm/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\gmagalhaes\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/gvpm/Desktop/All/templateStoreApi/StoreApi.csproj",
+      "projectUniqueName": "c:\\Users\\gmagalhaes\\Desktop\\GPMS\\templateStoreApi\\StoreApi.csproj",
       "projectName": "StoreApi",
-      "projectPath": "/home/gvpm/Desktop/All/templateStoreApi/StoreApi.csproj",
-      "packagesPath": "/home/gvpm/.nuget/packages/",
-      "outputPath": "/home/gvpm/Desktop/All/templateStoreApi/obj/",
+      "projectPath": "c:\\Users\\gmagalhaes\\Desktop\\GPMS\\templateStoreApi\\StoreApi.csproj",
+      "packagesPath": "C:\\Users\\gmagalhaes\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\gmagalhaes\\Desktop\\GPMS\\templateStoreApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/gvpm/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\gmagalhaes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Repositories\\StoneCo.SettlementForwarderElavon.Sender\\local.nuget.packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -23,7 +23,9 @@ namespace StoreApi.Repositories
         {
             var res = Query<User>.EQ(u => u.Id, userID);
             var _user = _db.GetCollection<User>("Users").FindOne(res);
+            if(_user != null){
             _user.UserHashPassword = "******";
+            }
             return _user;
         }
 
